@@ -4,23 +4,124 @@
   <head>
     <title>Hyperfeed - Web</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+	<style type="text/css" media="screen">
+		* { margin: 0; padding: 0; }
+
+		body {
+			font-family: 'Lato', sans-serif;
+			font-size: 100%;
+			line-height: 1.5;
+			font-weight: normal;
+			color: #fff;
+			background: url("/images/navy_blue.png");
+		}
+
+		ul {
+			list-style-position: inside;
+		}
+
+		ul li {
+			font-size: 1.2em;
+		}
+
+		a {
+			color: #DE321B;
+		}
+
+		a:hover {
+			color: #ddd;
+		}
+
+		.container {
+			width: 80%;
+			background: rgba(0,0,0,0.3);
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 40px;
+			margin: 50px auto;
+		}
+
+		.site-name {
+			font-size: 5em;
+			font-weight: 900;
+			letter-spacing: -2px;
+			text-shadow: 0 5px 10px rgba(0,0,0,0.5);
+			border-bottom: 1px dotted #666;
+			margin-bottom: 40px;
+		}
+
+		.site-name .name-color {
+			color: #E0941B;
+		}
+
+		.site-name .slogan {
+			font-size: 0.675em;
+			font-weight: normal;
+		}
+
+		.description {
+			font-size: 1.8em;
+			font-weight: 300;
+			letter-spacing: -1px;
+			color: #1BC8DE;
+			margin-bottom: 60px;
+		}
+
+		.description strong {
+			font-weight: 300;
+		}
+
+		.page-header {
+			font-size: 1.875em;
+			margin-bottom: 20px;
+		}
+
+		.page-subheader {
+			font-size: 1.5em;
+			font-weight: normal;
+			color: #ccc;
+			margin-bottom: 20px;
+		}
+
+		.box {
+			background: rgba(0,0,0,0.2);
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 20px;
+			margin: 40px 0;
+		}
+
+		footer {
+			color: #999;
+		}
+		footer a {
+			color: #999;
+			text-decoration: none;
+			border-bottom: 1px dotted #999;
+			padding-bottom: 2px;
+		}
+	</style>
   </head>
 
   <body>
-    <header>
-      <h1>Hyperfeed - Web</h1>
-    </header>
+	<div class="container">
+		<header>
+	      <h1 class="site-name">Hyper<span class="name-color">feed</span> <span class="slogan">entry point</span></h1>
+			<p class="description">
+				Permite consumir um feed no formato <strong>RSS</strong> e <strong>ATOM</strong>, adaptando-o para o formato Hypermedia Alexandria utilizando a gem Hyperfeed.
+			</p>
+	    </header>
 
-    <div class="content">
-      <%= yield %>
-    </div>
+	    <div class="content">
+	      <%= yield %>
+	    </div>
 
-    <footer>
-      <a href="https://github.com/gkato/hyperfeed">Hyperfeed</a>
-      |
-      <a href="https://github.com/rogerleite/hyperfeed-web">Hyperfeed-Web</a>
-    </footer>
-
+	    <footer>
+	      <a href="https://github.com/gkato/hyperfeed">Hyperfeed</a> |
+		  <a href="https://github.com/rogerleite/hyperfeed-web">Hyperfeed-Web</a>
+	    </footer>
+	</div>
   </body>
 
 </html>
